@@ -1,9 +1,9 @@
-# Docker Exercism 'haskel' Track Image
-An Exercism 'haskel' track docker image that is used to work through the 'haskel' track exercises.
+# Docker Exercism 'haskell' Track Image
+An Exercism 'haskell' track docker image that is used to work through the 'haskell' track exercises.
 
 ## Overview
 This project uses a Dockerfile and Makefile to manage the creation and
-distribution of an Exercism 'haskel' track docker image.
+distribution of an Exercism 'haskell' track docker image.
 
 ## Usage
 To build the image
