@@ -1,6 +1,6 @@
-FROM debian:9
+FROM haskell:8
 LABEL maintainer="mike@thebarkers.com" \
-      description="An exercism 'haskel' track image." \
+      description="An exercism 'haskell' track image." \
       version="0.1.1"
 
 # Update, upgrade and install dev tools
@@ -14,10 +14,8 @@ RUN cd /tmp \
     && tar xzf exercism-linux-64bit.tgz \
     && mv exercism /usr/local/bin/
 
-# Install the haskel tools
-RUN wget -qO- https://get.haskellstack.org/ | sh \
-    && stack install ghc \
-    && stack install hlint
+# Configure cabal and ghci
+RUN echo 'PATH=/opt/cabal/bin:/opt/ghc/bin:$PATH' >> /root/.profile
 
 # Clean up apt repo
 RUN apt-get autoremove -y \

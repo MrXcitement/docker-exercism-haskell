@@ -1,5 +1,5 @@
 username ?= mrbarker
-imagename ?= exercism-haskel
+imagename ?= exercism-haskell
 tag ?= 0.1.1
 
 .PHONY: clean docker-login docker-run
