@@ -1,6 +1,6 @@
 username ?= mrbarker
 imagename ?= exercism-haskell
-tag ?= 0.1.2
+tag ?= 0.1.3
 
 .PHONY: clean login run
 all: build

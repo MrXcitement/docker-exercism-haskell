@@ -1,7 +1,7 @@
 FROM haskell:8
 LABEL maintainer="mike@thebarkers.com" \
       description="An exercism 'haskell' track image." \
-      version="0.1.2"
+      version="0.1.3"
 
 # Update, upgrade and install dev tools
 RUN apt-get update \
@@ -19,8 +19,8 @@ RUN apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-# Configure cabal and ghci
-RUN echo 'PATH=/root/.cabal/bin:/root/.local/bin:/opt/cabal/bin:/opt/ghc/bin:$PATH' >> /root/.profile
+# Configure environment
+RUN echo 'PATH=/opt/cabal/bin:/opt/ghc/bin:$PATH' >> /root/.profile
 ENV SHELL /bin/bash
 WORKDIR /root/exercism
 
